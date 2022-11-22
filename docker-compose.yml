@@ -5,9 +5,15 @@ services:
     build: .
     ports:
       - "80:80"
+    image: ${DOCKER_USER_ID}/nginx-app
+    volumes:
+    - "./jenkins_home:/var/jenkins_home"
 
   production:
+
     image: ${DOCKER_USER_ID}/nginx-app:${BUILD_NUMBER}
+
+
     ports:
       - "80:80"
   
