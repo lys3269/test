@@ -11,6 +11,6 @@ services:
     image: ${DOCKER_USER_ID}/hw6:${BUILD_NUMBER}
     restart: always
     volumes:
-      -"/home/jenkins:/var/jenkins_home "
+      -"/home/jenkins:/var/jenkins_home/workspace/hw6"
     ports:
       - "80:80"
