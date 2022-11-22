@@ -5,4 +5,13 @@ services:
     build: .
     ports:
       - "80:80"
+    image: ${DOCKER_USER_ID}/nginx
+  production:
+
+    image: ${DOCKER_USER_ID}/nginx:${BUILD_NUMBER}
+
+
+    ports:
+      - "80:80"
+  
   
