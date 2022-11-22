@@ -10,5 +10,6 @@ services:
 
     image: ${DOCKER_USER_ID}/hw5:${BUILD_NUMBER}
     restart: always
+    command: python main.py
     ports:
       - "80:80"
