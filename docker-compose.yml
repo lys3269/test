@@ -5,5 +5,7 @@ services:
     build: .
     ports:
       - "80:80"
+    volumes:
+      -"/home/jenkins:/var/jenkins_home"
   
   
