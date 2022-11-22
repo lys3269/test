@@ -1,11 +1,12 @@
 version: '3.0'
 
 services:
-  nginx-app:
+  app:
     build: .
+    image: ${DOCKER_USER_ID}/hw6
+
+  production:
+
+    image: ${DOCKER_USER_ID}/hw6:${BUILD_NUMBER}
     ports:
       - "80:80"
-    volumes:
-      -"/home/jenkins:/var/jenkins_home"
-  
-  
