@@ -1,14 +1,14 @@
 version: '3.0'
 
 services:
-  app:
+  nginx-app:
     build: .
-    image: ${DOCKER_USER_ID}/hw6
+      
+    image: ${DOCKER_USER_ID}/hw5
 
   production:
 
-    image: ${DOCKER_USER_ID}/hw6:${BUILD_NUMBER}
-    volumes:
-      - .:/code
+    image: ${DOCKER_USER_ID}/hw5:${BUILD_NUMBER}
+    restart: always
     ports:
       - "80:80"
