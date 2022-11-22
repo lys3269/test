@@ -4,12 +4,11 @@ services:
   nginx-app:
     build: .
       
-    image: ${DOCKER_USER_ID}/hw6
-    container_name: nginx-app
+    image: ${DOCKER_USER_ID}/hw5
 
   production:
 
-    image: ${DOCKER_USER_ID}/hw6:${BUILD_NUMBER}
-    restars: always
+    image: ${DOCKER_USER_ID}/hw5:${BUILD_NUMBER}
+    restart: always
     ports:
       - "80:80"
