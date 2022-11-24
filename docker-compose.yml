@@ -2,8 +2,7 @@ version: '3.0'
 
 services:
   web:
-    build: ./test .
-      
+    build: .   
     image: ${DOCKER_USER_ID}/hw6
 
   production:
